@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2023-09-01T12:00:00.000Z" agent="5.0 (Windows)" etag="oPV6ykjyL7vdZ-Yq63CO" version="15.5.0" type="device">
+  <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
+    <mxGraphModel dx="1050" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Python中的弱引用与强引用对比" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="164" y="20" width="500" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 强引用部分 -->
+        <mxCell id="3" value="强引用 (Strong Reference)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="164" y="70" width="220" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="4" value="Object A" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="214" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="5" value="引用计数: 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="214" y="190" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="6" value="变量 a" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="104" y="130" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="7" value="变量 b" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="364" y="130" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="6" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="330" as="sourcePoint" />
+            <mxPoint x="434" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="7" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="330" as="sourcePoint" />
+            <mxPoint x="434" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="10" value="增加引用计数" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="154" y="100" width="90" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="11" value="增加引用计数" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304" y="100" width="90" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 弱引用部分 -->
+        <mxCell id="12" value="弱引用 (Weak Reference)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="164" y="240" width="220" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="13" value="Object B" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="214" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="14" value="引用计数: 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="214" y="360" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="15" value="变量 c" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="104" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="16" value="弱引用 d" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="364" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="17" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="15" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="500" as="sourcePoint" />
+            <mxPoint x="434" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="18" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;dashed=1;dashPattern=1 1;" edge="1" parent="1" source="16" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="500" as="sourcePoint" />
+            <mxPoint x="434" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="19" value="增加引用计数" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="154" y="270" width="90" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="20" value="不增加引用计数" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#CC0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="294" y="270" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- 循环引用问题 -->
+        <mxCell id="21" value="循环引用问题" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="554" y="70" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="22" value="强引用导致的循环引用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="544" y="100" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="23" value="Object X&#xa;引用计数: 1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="514" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="24" value="Object Y&#xa;引用计数: 1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="664" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="25" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="23" target="24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="370" as="sourcePoint" />
+            <mxPoint x="434" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="26" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="24" target="23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="370" as="sourcePoint" />
+            <mxPoint x="434" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="27" value="即使外部引用消失，&#xa;对象也无法被回收！" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#CC0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="559" y="190" width="180" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="28" value="使用弱引用解决循环引用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="544" y="240" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="29" value="Object M&#xa;引用计数: 1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="514" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="30" value="Object N&#xa;引用计数: 1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="664" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="31" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="29" target="30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="510" as="sourcePoint" />
+            <mxPoint x="434" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="32" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;dashed=1;dashPattern=1 1;" edge="1" parent="1" source="30" target="29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384" y="510" as="sourcePoint" />
+            <mxPoint x="434" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="33" value="强引用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="574" y="250" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="34" value="弱引用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="664" y="250" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="35" value="外部引用消失时，&#xa;对象可以被正常回收！" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="559" y="330" width="180" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 弱引用的特点 -->
+        <mxCell id="36" value="弱引用的主要特点" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e1d5e7;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="164" y="410" width="500" height="130" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="37" value="1. 不增加引用计数 - 不影响对象的生命周期" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="36">
+          <mxGeometry y="26" width="500" height="26" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="38" value="2. 当对象被回收后，弱引用自动失效，返回None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="36">
+          <mxGeometry y="52" width="500" height="26" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="39" value="3. 通过weakref模块创建：weak_ref = weakref.ref(obj)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="36">
+          <mxGeometry y="78" width="500" height="26" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="40" value="4. 解决循环引用问题，防止内存泄漏" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="36">
+          <mxGeometry y="104" width="500" height="26" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

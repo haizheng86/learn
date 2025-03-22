@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2023-07-18T10:00:00.000Z" agent="Mozilla/5.0" version="21.6.1" etag="DTIaBH3b0d1V9hVUcXwv" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Python对象缓存机制">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="Python对象缓存机制" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="270" y="20" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 内存区域 -->
+        <mxCell id="memory" value="Python内存空间" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=16;fontStyle=0;strokeWidth=2;resizeParent=0;resizeParentMax=0;resizeLast=0;resizeLastMax=0;html=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="80" y="70" width="670" height="500" as="geometry" />
+        </mxCell>
+        
+        <!-- 小整数池区域 -->
+        <mxCell id="integer_pool" value="小整数池 (-5 到 256)" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="memory">
+          <mxGeometry x="40" y="60" width="270" height="190" as="geometry" />
+        </mxCell>
+        
+        <!-- 小整数对象 -->
+        <mxCell id="int_minus5" value="PyLongObject (-5)&#xa;ob_refcnt: 1&#xa;ob_type: &lt;type 'int'&gt;&#xa;ob_digit: -5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="integer_pool">
+          <mxGeometry y="30" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="int_0_42" value="PyLongObject (0 - 42)&#xa;ob_refcnt: 变化值&#xa;ob_type: &lt;type 'int'&gt;&#xa;ob_digit: 0-42" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="integer_pool">
+          <mxGeometry y="90" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="int_256" value="PyLongObject (256)&#xa;ob_refcnt: 1&#xa;ob_type: &lt;type 'int'&gt;&#xa;ob_digit: 256" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="integer_pool">
+          <mxGeometry y="150" width="270" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 字符串intern区域 -->
+        <mxCell id="string_intern" value="字符串Intern机制" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="memory">
+          <mxGeometry x="360" y="60" width="270" height="190" as="geometry" />
+        </mxCell>
+        
+        <!-- 字符串对象 -->
+        <mxCell id="str_hello" value="PyUnicodeObject ('hello')&#xa;ob_refcnt: 3&#xa;ob_type: &lt;type 'str'&gt;&#xa;data: 'hello'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;" vertex="1" parent="string_intern">
+          <mxGeometry y="30" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="str_world" value="PyUnicodeObject ('world')&#xa;ob_refcnt: 2&#xa;ob_type: &lt;type 'str'&gt;&#xa;data: 'world'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;" vertex="1" parent="string_intern">
+          <mxGeometry y="90" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="str_hello_world" value="PyUnicodeObject ('hello world')&#xa;ob_refcnt: 2&#xa;ob_type: &lt;type 'str'&gt;&#xa;data: 'hello world'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;" vertex="1" parent="string_intern">
+          <mxGeometry y="150" width="270" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 变量引用区域 -->
+        <mxCell id="variables" value="变量引用" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="memory">
+          <mxGeometry x="40" y="280" width="590" height="190" as="geometry" />
+        </mxCell>
+        
+        <!-- 整数变量 -->
+        <mxCell id="var_a_b" value="a = 42&#xa;b = 42&#xa;(两个变量引用同一个小整数池中的对象)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" vertex="1" parent="variables">
+          <mxGeometry y="30" width="590" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 字符串变量 -->
+        <mxCell id="var_c_d" value="c = 'hello world'&#xa;d = 'hello world'&#xa;(两个变量引用同一个interned字符串对象)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" vertex="1" parent="variables">
+          <mxGeometry y="70" width="590" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 动态构建的字符串 -->
+        <mxCell id="var_e_f" value="e = 'hello ' + 'world'&#xa;f = 'hello ' + 'world'&#xa;(编译器优化，通常引用同一个对象)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" vertex="1" parent="variables">
+          <mxGeometry y="110" width="590" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="var_g_h" value="g = ''.join(['h', 'e', 'l', 'l', 'o'])&#xa;h = ''.join(['h', 'e', 'l', 'l', 'o'])&#xa;(运行时构建的字符串，通常是不同对象)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" vertex="1" parent="variables">
+          <mxGeometry y="150" width="590" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 引用线 - 整数 -->
+        <mxCell id="arrow_a_42" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.085;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.085;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#0066CC;" edge="1" parent="memory" source="var_a_b" target="int_0_42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="290" as="sourcePoint" />
+            <mxPoint x="400" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_b_42" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.185;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.185;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#0066CC;" edge="1" parent="memory" source="var_a_b" target="int_0_42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="320" as="sourcePoint" />
+            <mxPoint x="90" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 引用线 - 字符串 -->
+        <mxCell id="arrow_c_str" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#009900;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="memory" source="var_c_d" target="str_hello_world">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="360" as="sourcePoint" />
+            <mxPoint x="190" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_d_str" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#009900;exitX=0.6;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="memory" source="var_c_d" target="str_hello_world">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 引用线 - 动态构建字符串 -->
+        <mxCell id="arrow_e_str" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#009900;exitX=0.7;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="memory" source="var_e_f" target="str_hello_world">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_f_str" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#009900;exitX=0.8;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="memory" source="var_e_f" target="str_hello_world">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 非共享对象区域 -->
+        <mxCell id="non_shared" value="非缓存对象" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="memory">
+          <mxGeometry x="200" y="420" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="str_g" value="g对象: 'hello'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" vertex="1" parent="non_shared">
+          <mxGeometry y="30" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="str_h" value="h对象: 'hello'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" vertex="1" parent="non_shared">
+          <mxGeometry x="75" y="30" width="75" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 引用线 - 动态构建非共享字符串 -->
+        <mxCell id="arrow_g_new" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.4;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#CC0000;" edge="1" parent="memory" source="var_g_h" target="str_g">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="340" as="sourcePoint" />
+            <mxPoint x="400" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_h_new" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.6;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#CC0000;" edge="1" parent="memory" source="var_g_h" target="str_h">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="254" y="470" as="sourcePoint" />
+            <mxPoint x="257.5" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 解释文本 -->
+        <mxCell id="explanation" value="Python对象缓存机制通过复用相同的对象来优化内存使用和性能:&#xa;1. 小整数池缓存了-5到256之间的整数对象&#xa;2. 字符串interning机制缓存了符合条件的字符串对象&#xa;3. 对于缓存对象，多个变量可以引用同一个对象(a is b为True)&#xa;4. 动态构建的对象(如通过join方法)通常不被缓存(g is h为False)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="memory">
+          <mxGeometry x="40" y="500" width="590" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
