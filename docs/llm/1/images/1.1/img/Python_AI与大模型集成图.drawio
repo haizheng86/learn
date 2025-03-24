@@ -1,0 +1,187 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram id="ppFgmLToiB0WgNsB7YyZ" name="Page-1">
+    <mxGraphModel dx="1114" dy="2099" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Python与AI大模型生态集成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="230" y="-20" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="80" y="40" width="710" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Python核心优势" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="AI开发框架" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="数据处理与分析" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="120" y="210" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="机器学习" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="270" y="210" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="深度学习" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="420" y="210" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="自然语言处理" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="570" y="210" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="大模型接口与应用" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="345" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="应用场景" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="345" y="500" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="易于学习与应用" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="270" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="丰富的生态系统" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="400" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="强大的社区支持" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="530" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="高效的原型开发" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="660" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="• NumPy&lt;br&gt;• Pandas&lt;br&gt;• SciPy" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="290" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="• Scikit-learn&lt;br&gt;• XGBoost&lt;br&gt;• LightGBM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="270" y="290" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="• TensorFlow&lt;br&gt;• PyTorch&lt;br&gt;• Keras" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="420" y="290" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="• NLTK&lt;br&gt;• spaCy&lt;br&gt;• Hugging Face" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="570" y="290" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="365" y="120" as="sourcePoint" />
+            <mxPoint x="310" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="290" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="OpenAI API&#xa;(GPT-3.5, GPT-4)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="150" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Google Gemini API" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="280" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Claude API&#xa;(Anthropic)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="410" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="开源模型&#xa;(LLaMA, Mistral等)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="540" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Python客户端库" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="100" y="460" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="用户界面 (Streamlit, Gradio)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="230" y="460" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="向量数据库 (Pinecone, FAISS)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="430" y="460" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="LangChain/LlamaIndex" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="630" y="460" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="内容生成" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="100" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="对话助手" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="230" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="智能检索" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="365" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="代码辅助" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="500" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="多模态应用" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="630" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fontSize=12;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="412.5" y="420" width="45" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="通过API集成" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="26" target="22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="27" target="23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="470" as="sourcePoint" />
+            <mxPoint x="220" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="28" target="24" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="335" y="470" as="sourcePoint" />
+            <mxPoint x="350" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="29" target="25" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="535" y="470" as="sourcePoint" />
+            <mxPoint x="480" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="集成工具" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="345" y="430" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="&lt;b&gt;支持的范式&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="100" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="Few-shot" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="190" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Zero-shot" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="260" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="RAG" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="330" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="Fine-tuning" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="400" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="Chain-of-Thought" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="490" y="630" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="Agentic AI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="610" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="Function Calling" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="680" y="630" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="424.5" y="490" as="sourcePoint" />
+            <mxPoint x="424.5" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="代码示例：OpenAI API调用" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="160" y="700" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="import openai&#xa;&#xa;client = openai.OpenAI(api_key=&#39;your-api-key&#39;)&#xa;&#xa;response = client.chat.completions.create(&#xa;    model=&quot;gpt-3.5-turbo&quot;,&#xa;    messages=[&#xa;        {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;你是一个Python编程助手。&quot;},&#xa;        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;使用Python写一个简单的计算器程序&quot;}&#xa;    ]&#xa;)&#xa;&#xa;print(response.choices[0].message.content)" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=12;spacingLeft=4;spacingRight=4;" parent="1" vertex="1">
+          <mxGeometry x="80" y="730" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="Python LLM应用生态系统" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="550" y="710" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="- LLM工具包&lt;br&gt;&amp;nbsp; &amp;nbsp;* LangChain - 构建LLM应用的框架&lt;br&gt;&amp;nbsp; &amp;nbsp;* LlamaIndex - 数据增强框架&lt;br&gt;&lt;br&gt;- 向量数据库&lt;br&gt;&amp;nbsp; &amp;nbsp;* Pinecone - 向量搜索服务&lt;br&gt;&amp;nbsp; &amp;nbsp;* Chroma - 嵌入式向量数据库&lt;br&gt;&lt;br&gt;- 界面构建&lt;br&gt;&amp;nbsp; &amp;nbsp;* Streamlit - 快速构建AI应用界面&lt;br&gt;&amp;nbsp; &amp;nbsp;* Gradio - 演示AI模型的工具&lt;br&gt;&lt;br&gt;- 模型部署&lt;br&gt;&amp;nbsp; &amp;nbsp;* Hugging Face Spaces&lt;br&gt;&amp;nbsp; &amp;nbsp;* FastAPI - 构建高性能API" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=12;spacingLeft=4;spacingRight=4;" parent="1" vertex="1">
+          <mxGeometry x="450" y="730" width="290" height="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

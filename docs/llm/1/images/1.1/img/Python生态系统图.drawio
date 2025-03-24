@@ -1,0 +1,163 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram id="j5rTufPodMPFhwptFDLm" name="Page-1">
+    <mxGraphModel dx="1114" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Python生态系统" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="300" y="50" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="数据科学" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="235" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Web开发" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="450" y="235" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="人工智能" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="435" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="系统自动化" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="450" y="435" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="游戏开发" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="770" y="330" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Python标准库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="245" y="140" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="NumPy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="265" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Pandas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="220" y="265" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Matplotlib" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="305" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Scikit-learn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="220" y="305" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="TensorFlow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="465" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="PyTorch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="220" y="465" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Keras" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="505" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Transformers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="220" y="505" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Django" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="460" y="255" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Flask" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="550" y="265" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="FastAPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="460" y="305" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="SQLAlchemy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="550" y="305" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Ansible" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="460" y="465" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="Fabric" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="550" y="465" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Paramiko" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="460" y="505" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Pytest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="550" y="505" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Pygame" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="790" y="358" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="PyOpenGL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="870" y="358" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="Panda3D" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="830" y="413" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="数据分析、可视化、机器学习" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="355" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="深度学习、自然语言处理、计算机视觉" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="555" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="Web应用、API、数据库接口" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="450" y="355" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="系统管理、测试、DevOps" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="450" y="555" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="2D/3D游戏和图形应用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="770" y="453" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="PyPI" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="820" y="205" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="Python包索引&lt;br&gt;40万+第三方包" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="820" y="295" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="215" width="590" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="365" y="650" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="36" target="35" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="455" as="sourcePoint" />
+            <mxPoint x="570" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;dashed=1;" parent="1" source="35" target="33" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="455" as="sourcePoint" />
+            <mxPoint x="570" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" parent="1" source="35" target="8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="310" as="sourcePoint" />
+            <mxPoint x="830" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="41" value="WSGI/ASGI服务器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="240" y="640" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="容器/云平台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="440" y="640" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="科学计算" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="180" y="215" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="Web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="215" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="AI/ML" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="180" y="415" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="系统" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="415" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="游戏" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="830" y="331" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="依赖" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;rotation=-15;" parent="1" vertex="1">
+          <mxGeometry x="730" y="225" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="构建于" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="395" y="525" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="主题领域" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
