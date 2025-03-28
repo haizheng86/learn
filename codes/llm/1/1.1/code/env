@@ -1,3 +1,4 @@
+# 项目运行前先把该文件的内容填好，然后更改文件名称为.env ，该文件本是隐藏文件，为了提交代码，故而改成普通文件。代码运行前改回.env文件名称
 # 配置大模型厂商的api_url以及api_key
 # OpenAI API密钥（用于AI建议生成）
 OPENAI_API_KEY=your_openai_api_key_here
