@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多模态内容助手 - 2025版</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.03);
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5d7ef8, #9666d6);
+        }
+        .results-container {
+            display: none;
+        }
+        .keyword-badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+        .sentiment-positive {
+            color: #198754;
+        }
+        .sentiment-negative {
+            color: #dc3545;
+        }
+        .sentiment-neutral {
+            color: #6c757d;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .spinner-border {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .tab-pane {
+            padding: 20px 0;
+        }
+        #file-dropzone {
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #file-dropzone:hover, #file-dropzone.dragover {
+            border-color: #6e8efb;
+            background-color: rgba(110, 142, 251, 0.05);
+        }
+        #file-input {
+            display: none;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            background-color: #343a40;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="mb-2">多模态内容助手</h1>
+                    <p class="lead mb-0">分析、处理、优化各类内容 · 由Python标准库+AI驱动</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-light text-dark">2025版</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="file-tab" data-bs-toggle="tab" data-bs-target="#file" type="button" role="tab" aria-controls="file" aria-selected="true">
+                                    <i class="bi bi-file-earmark"></i> 文件分析
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="text-tab" data-bs-toggle="tab" data-bs-target="#text" type="button" role="tab" aria-controls="text" aria-selected="false">
+                                    <i class="bi bi-text-paragraph"></i> 文本分析
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <!-- 文件分析选项卡 -->
+                            <div class="tab-pane fade show active" id="file" role="tabpanel" aria-labelledby="file-tab">
+                                <div id="file-dropzone" onclick="document.getElementById('file-input').click()">
+                                    <div class="mb-3">
+                                        <i class="bi bi-cloud-arrow-up fs-1"></i>
+                                    </div>
+                                    <h5>拖放或点击上传文件</h5>
+                                    <p class="text-muted">支持文本、图像、视频和音频</p>
+                                </div>
+                                <input type="file" id="file-input" accept=".txt,.md,.jpg,.jpeg,.png,.gif,.mp4,.mov,.mp3,.wav">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" id="generate-suggestions-file" checked>
+                                    <label class="form-check-label" for="generate-suggestions-file">
+                                        使用AI生成内容建议
+                                    </label>
+                                </div>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button id="analyze-file-btn" class="btn btn-primary" disabled>
+                                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        分析文件
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- 文本分析选项卡 -->
+                            <div class="tab-pane fade" id="text" role="tabpanel" aria-labelledby="text-tab">
+                                <div class="mb-3">
+                                    <label for="text-input" class="form-label">文本内容</label>
+                                    <textarea class="form-control" id="text-input" rows="8" placeholder="请输入需要分析的文本内容..."></textarea>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="generate-suggestions-text" checked>
+                                    <label class="form-check-label" for="generate-suggestions-text">
+                                        使用AI生成内容建议
+                                    </label>
+                                </div>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button id="analyze-text-btn" class="btn btn-primary">
+                                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        分析文本
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 结果展示区 -->
+                <div id="results-container" class="results-container">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">分析结果</h5>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="download-results">
+                                导出JSON
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <!-- 基本信息 -->
+                            <div class="mb-4">
+                                <h6 class="card-subtitle mb-2 text-muted">基本信息</h6>
+                                <dl class="row">
+                                    <dt class="col-sm-4">内容类型</dt>
+                                    <dd class="col-sm-8" id="result-content-type">-</dd>
+                                    
+                                    <dt class="col-sm-4">文件名/大小</dt>
+                                    <dd class="col-sm-8" id="result-file-info">-</dd>
+                                    
+                                    <dt class="col-sm-4">分析时间</dt>
+                                    <dd class="col-sm-8" id="result-timestamp">-</dd>
+                                </dl>
+                            </div>
+                            
+                            <!-- 文本内容分析 -->
+                            <div class="mb-4" id="text-analysis-section">
+                                <h6 class="card-subtitle mb-2 text-muted">文本分析</h6>
+                                <dl class="row">
+                                    <dt class="col-sm-4">字符数/单词数</dt>
+                                    <dd class="col-sm-8" id="result-text-length">-</dd>
+                                    
+                                    <dt class="col-sm-4">语言</dt>
+                                    <dd class="col-sm-8" id="result-language">-</dd>
+                                    
+                                    <dt class="col-sm-4" style="display: none;">情感倾向</dt>
+                                    <dd class="col-sm-8" style="display: none;" id="result-sentiment">-</dd>
+                                    
+                                    <dt class="col-sm-4">关键词</dt>
+                                    <dd class="col-sm-8" id="result-keywords">-</dd>
+                                </dl>
+                            </div>
+                            
+                            <!-- 媒体内容分析 -->
+                            <div class="mb-4" id="media-analysis-section">
+                                <h6 class="card-subtitle mb-2 text-muted">媒体分析</h6>
+                                <dl class="row">
+                                    <dt class="col-sm-4">媒体格式</dt>
+                                    <dd class="col-sm-8" id="result-media-format">-</dd>
+                                    
+                                    <dt class="col-sm-4">分辨率/尺寸</dt>
+                                    <dd class="col-sm-8" id="result-media-size">-</dd>
+                                </dl>
+                            </div>
+                            
+                            <!-- AI建议 -->
+                            <div class="mb-4" id="ai-suggestions-section">
+                                <h6 class="card-subtitle mb-2 text-muted">AI建议</h6>
+                                <div class="card mb-3 bg-light">
+                                    <div class="card-body">
+                                        <div id="result-ai-suggestions">
+                                            <div class="d-flex justify-content-center py-3">
+                                                <div class="spinner-border text-primary" role="status">
+                                                    <span class="visually-hidden">加载中...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取DOM元素
+            const fileDropzone = document.getElementById('file-dropzone');
+            const fileInput = document.getElementById('file-input');
+            const textInput = document.getElementById('text-input');
+            const analyzeFileBtn = document.getElementById('analyze-file-btn');
+            const analyzeTextBtn = document.getElementById('analyze-text-btn');
+            const resultsContainer = document.getElementById('results-container');
+            const downloadResultsBtn = document.getElementById('download-results');
+            
+            // 文件拖放处理
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                fileDropzone.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                fileDropzone.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                fileDropzone.addEventListener(eventName, unhighlight, false);
+            });
+            
+            function highlight() {
+                fileDropzone.classList.add('dragover');
+            }
+            
+            function unhighlight() {
+                fileDropzone.classList.remove('dragover');
+            }
+            
+            // 处理文件拖放
+            fileDropzone.addEventListener('drop', handleDrop, false);
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                fileInput.files = files;
+                
+                if (files.length > 0) {
+                    analyzeFileBtn.removeAttribute('disabled');
+                    document.querySelector('#file-dropzone h5').textContent = `已选择文件: ${files[0].name}`;
+                }
+            }
+            
+            // 文件选择处理
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    analyzeFileBtn.removeAttribute('disabled');
+                    document.querySelector('#file-dropzone h5').textContent = `已选择文件: ${fileInput.files[0].name}`;
+                } else {
+                    analyzeFileBtn.setAttribute('disabled', 'disabled');
+                    document.querySelector('#file-dropzone h5').textContent = '拖放或点击上传文件';
+                }
+            });
+            
+            // 处理文件分析请求
+            analyzeFileBtn.addEventListener('click', function() {
+                if (fileInput.files.length === 0) {
+                    alert('请先选择文件');
+                    return;
+                }
+                
+                const spinner = analyzeFileBtn.querySelector('.spinner-border');
+                spinner.classList.remove('d-none');
+                analyzeFileBtn.setAttribute('disabled', 'disabled');
+                
+                const formData = new FormData();
+                formData.append('file', fileInput.files[0]);
+                formData.append('generate_suggestions', document.getElementById('generate-suggestions-file').checked);
+                
+                fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应错误');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayResults(data);
+                })
+                .catch(error => {
+                    alert('分析失败: ' + error.message);
+                })
+                .finally(() => {
+                    spinner.classList.add('d-none');
+                    analyzeFileBtn.removeAttribute('disabled');
+                });
+            });
+            
+            // 处理文本分析请求
+            analyzeTextBtn.addEventListener('click', function() {
+                const text = textInput.value.trim();
+                
+                if (!text) {
+                    alert('请输入文本内容');
+                    return;
+                }
+                
+                const spinner = analyzeTextBtn.querySelector('.spinner-border');
+                spinner.classList.remove('d-none');
+                analyzeTextBtn.setAttribute('disabled', 'disabled');
+                
+                fetch('/analyze-text', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        text: text,
+                        generate_suggestions: document.getElementById('generate-suggestions-text').checked
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应错误');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayResults(data);
+                })
+                .catch(error => {
+                    alert('分析失败: ' + error.message);
+                })
+                .finally(() => {
+                    spinner.classList.add('d-none');
+                    analyzeTextBtn.removeAttribute('disabled');
+                });
+            });
+            
+            // 显示分析结果
+            function displayResults(data) {
+                console.log('分析结果:', data);
+                
+                // 显示结果容器
+                resultsContainer.style.display = 'block';
+                
+                // 滚动到结果区域
+                resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                
+                // 设置基本信息
+                document.getElementById('result-content-type').textContent = formatContentType(data.content_type || 'text');
+                document.getElementById('result-timestamp').textContent = new Date().toLocaleString();
+                
+                // 根据内容类型显示不同的分析结果
+                const contentType = data.content_type || 'text';
+                
+                if (contentType === 'text') {
+                    // 文本分析结果
+                    document.getElementById('text-analysis-section').style.display = 'block';
+                    document.getElementById('media-analysis-section').style.display = 'none';
+                    
+                    // 显示文本长度
+                    const textLength = data.text_info?.char_count || data.text_length || 0;
+                    document.getElementById('result-file-info').textContent = `${textLength} 字符`;
+                    document.getElementById('result-text-length').textContent = `${textLength} 字符`;
+                    
+                    // 显示分析结果
+                    if (data.ai_analysis?.analysis) {
+                        const analysisEl = document.createElement('div');
+                        analysisEl.className = 'mb-3';
+                        analysisEl.innerHTML = formatMarkdown(data.ai_analysis.analysis);
+                        document.getElementById('text-analysis-section').appendChild(analysisEl);
+                    }
+                    
+                    // 情感倾向
+                    if (data.analysis?.sentiment) {
+                        const sentimentEl = document.getElementById('result-sentiment');
+                        sentimentEl.textContent = formatSentiment(data.analysis.sentiment);
+                        sentimentEl.className = `sentiment-${data.analysis.sentiment || 'neutral'}`;
+                    }
+                    
+                    // 关键词
+                    if (data.analysis?.keywords) {
+                        const keywordsEl = document.getElementById('result-keywords');
+                        keywordsEl.innerHTML = '';
+                        data.analysis.keywords.forEach(keyword => {
+                            const badge = document.createElement('span');
+                            badge.className = 'badge bg-primary keyword-badge';
+                            badge.textContent = String(keyword);
+                            keywordsEl.appendChild(badge);
+                        });
+                    }
+                    
+                    // 显示文本统计信息
+                    if (data.analysis) {
+                        const statsEl = document.createElement('div');
+                        statsEl.className = 'mt-3';
+                        statsEl.innerHTML = `
+                            <h5>文本统计</h5>
+                            <ul class="list-unstyled">
+                                <li>句子数量: ${data.analysis.sentence_count || 0}</li>
+                                <li>平均句子长度: ${data.analysis.avg_sentence_length || 0}</li>
+                                <li>平均词长: ${data.analysis.avg_word_length || 0}</li>
+                                <li>语言: ${data.analysis.language || '未知'}</li>
+                            </ul>
+                        `;
+                        document.getElementById('text-analysis-section').appendChild(statsEl);
+                    }
+                } else {
+                    // 媒体分析结果
+                    document.getElementById('text-analysis-section').style.display = 'none';
+                    document.getElementById('media-analysis-section').style.display = 'block';
+                    
+                    // 设置文件信息
+                    if (data.file_info) {
+                        document.getElementById('result-file-info').textContent = 
+                            `${data.file_info.name || '-'} / ${data.file_info.size_formatted || '-'}`;
+                    }
+                    
+                    if (contentType === 'image') {
+                        document.getElementById('result-media-format').textContent = data.format || '-';
+                        document.getElementById('result-media-size').textContent = 
+                            `${data.width || 0} × ${data.height || 0} 像素`;
+                    } else if (contentType === 'video') {
+                        document.getElementById('result-media-format').textContent = data.extension || '-';
+                        document.getElementById('result-media-size').textContent = '未检测 (需安装ffmpeg)';
+                    } else if (contentType === 'audio') {
+                        document.getElementById('result-media-format').textContent = data.extension || '-';
+                        document.getElementById('result-media-size').textContent = '未检测 (需安装ffmpeg)';
+                    }
+                }
+                
+                // AI建议
+                const aiSuggestionsEl = document.getElementById('result-ai-suggestions');
+                const aiSuggestionsSection = document.getElementById('ai-suggestions-section');
+                
+                if (data.ai_analysis?.suggestions) {
+                    aiSuggestionsSection.style.display = 'block';
+                    const suggestionsText = data.ai_analysis.suggestions.map(s => String(s)).join('\n');
+                    aiSuggestionsEl.innerHTML = formatMarkdown(suggestionsText);
+                } else {
+                    aiSuggestionsSection.style.display = 'none';
+                }
+                
+                // 保存结果数据用于下载
+                window.analysisResults = data;
+            }
+            
+            // 下载结果JSON
+            downloadResultsBtn.addEventListener('click', function() {
+                if (!window.analysisResults) {
+                    alert('没有分析结果可供下载');
+                    return;
+                }
+                
+                const dataStr = JSON.stringify(window.analysisResults, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'content-analysis-results.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+            
+            // 辅助函数
+            function formatContentType(type) {
+                const types = {
+                    'text': '文本',
+                    'image': '图像',
+                    'video': '视频',
+                    'audio': '音频'
+                };
+                
+                return types[type] || type;
+            }
+            
+            function formatLanguage(lang) {
+                const languages = {
+                    'chinese': '中文',
+                    'english': '英文'
+                };
+                
+                return languages[lang] || lang;
+            }
+            
+            function formatSentiment(sentiment) {
+                const sentiments = {
+                    'positive': '积极 😊',
+                    'negative': '消极 😞',
+                    'neutral': '中性 😐'
+                };
+                
+                return sentiments[sentiment] || sentiment;
+            }
+            
+            function formatFileSize(bytes) {
+                if (bytes === 0) return '0 字节';
+                
+                const k = 1024;
+                const sizes = ['字节', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            
+            function formatMarkdown(text) {
+                // 简单的Markdown格式转换为HTML
+                let html = text
+                    .replace(/\n\n/g, '<br><br>')
+                    .replace(/\n/g, '<br>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    .replace(/^(\d+\.)/gm, '<strong>$1</strong>');
+                    
+                return html;
+            }
+        });
+    </script>
+</body>
+</html> 
